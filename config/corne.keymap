@@ -29,6 +29,25 @@
             #binding-cells = <0>;
             bindings = <&mt RCTRL BACKSPACE>, <&kp BACKSPACE>;
         };
+
+        mt: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap";
+        };
+
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
+
     };
 
     combos {
@@ -40,12 +59,6 @@
         };
     };
 
-    &mt {
-        flavor = "tap-preferred";
-    };
-    &lt {
-        flavor = "tap-preferred";
-    };
 
 
     macros {
