@@ -27,17 +27,18 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <160>;
             bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <115>;
             display-name = "Mod-Tap";
-            quick-tap-ms = <170>;
+            quick-tap-ms = <160>;
         };
 
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <160>;
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };
