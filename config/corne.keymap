@@ -40,6 +40,14 @@
         };
     };
 
+    &mt {
+        flavor = "tap-preferred";
+    };
+    &lt {
+        flavor = "tap-preferred";
+    };
+
+
     macros {
         up_dir: up_dir {
             compatible = "zmk,behavior-macro";
