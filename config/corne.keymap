@@ -60,9 +60,9 @@
 
             bindings = <
 &kp DOUBLE_QUOTES  &kp SQT        &kp N7  &kp N8         &kp N9          &kp MINUS    &kp PIPE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN  &kp EXCLAMATION  &kp BSLH
-&trans             &kp ASTERISK   &kp N4  &kp N5         &kp N6          &kp N0       &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &kp HASH         &kp SQT
+&kp TILDE          &kp ASTERISK   &kp N4  &kp N5         &kp N6          &kp N0       &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &kp HASH         &kp SQT
 &trans             &kp AMPERSAND  &kp N1  &kp N2         &kp N3          &kp PLUS     &kp GRAVE  &kp LBKT              &kp RBKT               &kp CARET    &kp PERCENT      &trans
-                                          &left_gui_alt  &kp UNDERSCORE  &trans       &trans     &kp EQUAL             &right_gui_alt
+                                          &left_gui_alt  &kp UNDERSCORE  &trans       &trans     &trans                &right_gui_alt
             >;
         };
 
