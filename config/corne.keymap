@@ -22,6 +22,13 @@
             #binding-cells = <0>;
             bindings = <&kp RGUI>, <&kp RALT>;
         };
+
+        ctrl_backspace: ctrl_backspace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_BACKSPACE";
+            #binding-cells = <0>;
+            bindings = <&mt RCTRL BACKSPACE>, <&kp BACKSPACE>;
+        };
     };
 
     combos {
@@ -44,10 +51,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E          &kp R         &kp T                     &kp Y                &kp U        &kp I           &kp O    &kp P      &kp MINUS
-&kp ESCAPE  &kp A  &kp S  &kp D          &kp F         &kp G                     &kp H                &kp J        &kp K           &kp L    &kp SEMI   &mo 2
-&kp LSHFT   &kp Z  &kp X  &kp C          &kp V         &kp B                     &kp N                &kp M        &kp COMMA       &kp DOT  &kp SLASH  &kp RSHIFT
-                          &left_gui_alt  &lt 1 DELETE  &mt LEFT_CONTROL SPACE    &mt RCTRL BACKSPACE  &lt 1 ENTER  &right_gui_alt
+&kp TAB     &kp Q  &kp W  &kp E          &kp R         &kp T                     &kp Y            &kp U        &kp I           &kp O    &kp P      &kp MINUS
+&kp ESCAPE  &kp A  &kp S  &kp D          &kp F         &kp G                     &kp H            &kp J        &kp K           &kp L    &kp SEMI   &mo 2
+&kp LSHFT   &kp Z  &kp X  &kp C          &kp V         &kp B                     &kp N            &kp M        &kp COMMA       &kp DOT  &kp SLASH  &kp RSHIFT
+                          &left_gui_alt  &lt 1 DELETE  &mt LEFT_CONTROL SPACE    &ctrl_backspace  &lt 1 ENTER  &right_gui_alt
             >;
         };
 
@@ -59,10 +66,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp DOUBLE_QUOTES  &kp SQT        &kp N7  &kp N8         &kp N9          &kp MINUS    &kp PIPE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN  &kp EXCLAMATION  &kp BSLH
-&kp TILDE          &kp ASTERISK   &kp N4  &kp N5         &kp N6          &kp N0       &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &kp HASH         &kp SQT
-&trans             &kp AMPERSAND  &kp N1  &kp N2         &kp N3          &kp PLUS     &kp GRAVE  &kp LBKT              &kp RBKT               &kp CARET    &kp PERCENT      &trans
-                                          &left_gui_alt  &kp UNDERSCORE  &trans       &trans     &trans                &right_gui_alt
+&trans     &kp BACKSLASH  &kp N7  &kp N8         &kp N9          &kp MINUS    &kp PIPE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN  &kp EXCLAMATION  &kp DOUBLE_QUOTES
+&kp TILDE  &kp ASTERISK   &kp N4  &kp N5         &kp N6          &kp N0       &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &kp HASH         &kp SQT
+&trans     &kp AMPERSAND  &kp N1  &kp N2         &kp N3          &kp PLUS     &kp GRAVE  &kp LBKT              &kp RBKT               &kp CARET    &kp PERCENT      &trans
+                                  &left_gui_alt  &kp UNDERSCORE  &trans       &trans     &trans                &right_gui_alt
             >;
         };
 
@@ -74,10 +81,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans        &trans        &kp LC(BACKSPACE)  &kp LC(RIGHT)  &trans        &trans          &kp K_COPY  &kp C_AC_UNDO  &kp TAB    &kp RS(TAB)  &kp K_PASTE  &trans
-&trans        &trans        &trans             &kp K_CUT      &trans        &trans          &kp LEFT    &kp DOWN       &kp UP     &kp RIGHT    &trans       &trans
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3   &bt BT_SEL 4  &kp LC(LEFT)    &kp HOME    &kp PAGE_DOWN  &kp PG_UP  &kp END      &trans       &trans
-                                               &trans         &trans        &trans          &trans      &trans         &trans
+&trans        &trans        &kp LC(BACKSPACE)  &kp LC(RIGHT)  &kp C_AC_REDO  &trans          &kp K_COPY  &kp C_AC_UNDO  &kp TAB    &kp RS(TAB)  &kp K_PASTE    &trans
+&trans        &trans        &trans             &kp K_CUT      &trans         &trans          &kp LEFT    &kp DOWN       &kp UP     &kp RIGHT    &kp K_BACK     &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3   &bt BT_SEL 4   &kp LC(LEFT)    &kp HOME    &kp PAGE_DOWN  &kp PG_UP  &kp END      &kp K_FORWARD  &trans
+                                               &trans         &trans         &trans          &trans      &trans         &trans
             >;
         };
 
