@@ -40,6 +40,15 @@
         };
     };
 
+    macros {
+        up_dir: up_dir {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
+            label = "UP_DIR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -81,7 +90,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans        &trans        &kp LC(BACKSPACE)  &kp LC(RIGHT)  &kp C_AC_REDO  &trans          &kp K_COPY  &kp C_AC_UNDO  &kp TAB    &kp RS(TAB)  &kp K_PASTE    &trans
+&trans        &trans        &kp LC(BACKSPACE)  &kp LC(RIGHT)  &kp C_AC_REDO  &up_dir         &kp K_COPY  &kp C_AC_UNDO  &kp TAB    &kp RS(TAB)  &kp K_PASTE    &trans
 &trans        &trans        &trans             &kp K_CUT      &trans         &trans          &kp LEFT    &kp DOWN       &kp UP     &kp RIGHT    &kp K_BACK     &trans
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3   &bt BT_SEL 4   &kp LC(LEFT)    &kp HOME    &kp PAGE_DOWN  &kp PG_UP  &kp END      &kp K_FORWARD  &trans
                                                &trans         &trans         &trans          &trans      &trans         &trans
